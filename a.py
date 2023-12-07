@@ -83,22 +83,8 @@ def main():
 					review_button_xpath='//button[@aria-label="Review your application"]'
 					submt_button_xpath='//button[@aria-label="Submit application"]'
 					done_button_xpath='//button//span[@class="artdeco-button__text" and contains(normalize-space(),"Done")]'
-					
-				# page.locator('//div[@name="cc"]//input').fill(email_cc)
-				# page.wait_for_timeout(1000)
-				# page.locator('//div[@name="bcc"]//input').fill(email_bcc)
-				# page.locator('//input[@name="subjectbox"]').fill(email_subject)
-				# page.locator('//div[@class="Am Al editable LW-avf tS-tW"]').fill(email_text)
-				# page.wait_for_timeout(1000)
-
-				# send_xpath='//div[@class="T-I J-J5-Ji aoO v7 T-I-atl L3"]'
-				# send_link=page.locator(send_xpath)
-				# send_link.click()
-				# page.wait_for_timeout(4000)
 		browser.close()
-		os.system('cls')
-		print("Your Mail has been sent successfully\n")
-				
+		
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
@@ -107,11 +93,6 @@ if __name__ == "__main__":
 	parser.add_argument("-j","--job", type=str)
 	parser.add_argument("-l","--loc", type=str)
 	
-	# parser.add_argument("-to", "--to", type=str)
-	# parser.add_argument("-cc", "--cc", type=str)
-	# parser.add_argument("-bcc", "--bcc", type=str)
-	# parser.add_argument("-S","--subject", type=str)
-	# parser.add_argument("-T", "--text", type=str)
 	
 	email=recipient=email_cc=email_bcc=email_text=email_subject=""
 	args = parser.parse_args()
@@ -135,23 +116,4 @@ if __name__ == "__main__":
 	if args.loc:
 		loc = args.loc
 		loc+="."
-		
-   
-	  
-	# else:
-	#     recipient = input("Enter the email of the person you want to mail: ")
-	# if args.cc:
-	#     email_cc = args.cc
-	# if args.bcc:
-	#     email_bcc = args.bcc
-	# if args.subject:
-	#     email_subject = args.subject
-	# else:
-	#     email_subject = input("Enter Email Subject: ")
-	# if args.text:
-	#     email_text = args.text
-	# else:
-	#     email_text = input("Enter the text portion of the mail: ")
-
-
 	main()
