@@ -1,4 +1,4 @@
-# Linkedin-Auto-Easy-Job-Apply
+# Linkedin-Auto-Easy-Job-Apply (INCOMPLETE)
 This project is used to auto-apply to jobs with easy apply filter on Linkedin (Incomplete)
 
 ## Overview
